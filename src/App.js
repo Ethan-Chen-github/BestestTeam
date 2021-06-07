@@ -3,14 +3,27 @@ import "./App.css";
 import { React } from "react";
 import { ReactMic } from "react-mic";
 import { useEffect, useState } from "react";
-import { Divider, Button, Layout } from "antd";
+import { Divider, Button, Layout, Modal } from "antd";
 import { AudioTwoTone } from "@ant-design/icons";
 
 export default function App() {
   const [record, setRecord] = useState(false);
   const [file, setFile] = useState("waiting");
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const { Header, Footer, Sider, Content } = Layout;
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
 
   useEffect(() => {}, []);
 
@@ -28,7 +41,7 @@ export default function App() {
 
   function onStop(recordedBlob) {
     setFile(recordedBlob.blobURL);
-    console.log(recordedBlob.blobURL);
+    setIsModalVisible(true);
   }
 
   return (
@@ -54,13 +67,6 @@ export default function App() {
 
       <br />
 
-      {/* <Button onClick={startRecording} type="button">
-        Start
-      </Button>
-      <Button onMouseDown={stopRecording} type="button">
-        Stop
-      </Button> */}
-
       <Button
         shape="circle"
         icon={<AudioTwoTone />}
@@ -75,10 +81,16 @@ export default function App() {
       <span>link to voice file: </span>
       <a href={file}>{file}</a>
 
-      {file == "waiting" ? <div/>: <iframe src={file} />}
 
       <Divider />
       <Footer>@2021 Bestest Team</Footer>
+
+
+
+      <Modal title="Voice Command" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+        <p>Audio Command</p>
+        <iframe src={file} />
+      </Modal>
     </div>
   );
 }
