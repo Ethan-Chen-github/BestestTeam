@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/BestestTeam/static/css/main.21c4066d.chunk.css",
+    "main.js": "/BestestTeam/static/js/main.f0f09846.chunk.js",
+    "main.js.map": "/BestestTeam/static/js/main.f0f09846.chunk.js.map",
+    "runtime-main.js": "/BestestTeam/static/js/runtime-main.f1e3880b.js",
+    "runtime-main.js.map": "/BestestTeam/static/js/runtime-main.f1e3880b.js.map",
+    "static/css/2.fc2db407.chunk.css": "/BestestTeam/static/css/2.fc2db407.chunk.css",
+    "static/js/2.d758c850.chunk.js": "/BestestTeam/static/js/2.d758c850.chunk.js",
+    "static/js/2.d758c850.chunk.js.map": "/BestestTeam/static/js/2.d758c850.chunk.js.map",
+    "static/js/3.742a8ae9.chunk.js": "/BestestTeam/static/js/3.742a8ae9.chunk.js",
+    "static/js/3.742a8ae9.chunk.js.map": "/BestestTeam/static/js/3.742a8ae9.chunk.js.map",
+    "index.html": "/BestestTeam/index.html",
+    "static/css/2.fc2db407.chunk.css.map": "/BestestTeam/static/css/2.fc2db407.chunk.css.map",
+    "static/css/main.21c4066d.chunk.css.map": "/BestestTeam/static/css/main.21c4066d.chunk.css.map",
+    "static/js/2.d758c850.chunk.js.LICENSE.txt": "/BestestTeam/static/js/2.d758c850.chunk.js.LICENSE.txt",
+    "static/media/bp.2d68a791.png": "/BestestTeam/static/media/bp.2d68a791.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f1e3880b.js",
+    "static/css/2.fc2db407.chunk.css",
+    "static/js/2.d758c850.chunk.js",
+    "static/css/main.21c4066d.chunk.css",
+    "static/js/main.f0f09846.chunk.js"
+  ]
+}
