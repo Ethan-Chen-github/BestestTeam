@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BestestTeam/static/css/main.21c4066d.chunk.css",
+    "main.css": "/BestestTeam/static/css/main.16b7cd9e.chunk.css",
     "main.js": "/BestestTeam/static/js/main.6111016a.chunk.js",
     "main.js.map": "/BestestTeam/static/js/main.6111016a.chunk.js.map",
     "runtime-main.js": "/BestestTeam/static/js/runtime-main.2cde1f6c.js",
@@ -12,7 +12,7 @@
     "static/js/3.c0b00511.chunk.js.map": "/BestestTeam/static/js/3.c0b00511.chunk.js.map",
     "index.html": "/BestestTeam/index.html",
     "static/css/2.fc2db407.chunk.css.map": "/BestestTeam/static/css/2.fc2db407.chunk.css.map",
-    "static/css/main.21c4066d.chunk.css.map": "/BestestTeam/static/css/main.21c4066d.chunk.css.map",
+    "static/css/main.16b7cd9e.chunk.css.map": "/BestestTeam/static/css/main.16b7cd9e.chunk.css.map",
     "static/js/2.a4f0ade8.chunk.js.LICENSE.txt": "/BestestTeam/static/js/2.a4f0ade8.chunk.js.LICENSE.txt",
     "static/media/bp.2d68a791.png": "/BestestTeam/static/media/bp.2d68a791.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.2cde1f6c.js",
     "static/css/2.fc2db407.chunk.css",
     "static/js/2.a4f0ade8.chunk.js",
-    "static/css/main.21c4066d.chunk.css",
+    "static/css/main.16b7cd9e.chunk.css",
     "static/js/main.6111016a.chunk.js"
   ]
 }
