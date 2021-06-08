@@ -54,7 +54,7 @@ export default function App() {
 
       <Divider />
 
-      <h2>Press Button for Voice Command</h2>
+      <h2>Hold for Voice Command</h2>
 
       <ReactMic
         record={record}
