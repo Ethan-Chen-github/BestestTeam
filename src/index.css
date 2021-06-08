@@ -21,3 +21,8 @@ code {
 #headerText {
   color: white;
 }
+
+.ant-btn-icon-only.ant-btn-lg {
+  width: 90px;
+  height: 90px;
+}
