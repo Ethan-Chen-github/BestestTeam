@@ -96,7 +96,7 @@ export default function App() {
 
       <Carousel autoplay>
         <div>
-          <h3 style={contentStyle}>You can say: What is current wind speed?</h3>
+          <h3 style={contentStyle}>You can say: Show me the map for Wind Turbine?</h3>
         </div>
         <div>
           <h3 style={contentStyle}>You can say: What is current output?</h3>
@@ -114,9 +114,11 @@ export default function App() {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <p>Audio Command</p>
-        <iframe src={file} />
+        <iframe src={file} id='myHide'/>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27702.085128008992!2d-95.6353049!3d29.784562!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d423a5fdf0dbbad!2sbp%20Center%20For%20High%20Performance%20Computing!5e0!3m2!1sen!2sus!4v1623265059348!5m2!1sen!2sus" id='map'/>
       </Modal>
+
+
 
       <span>link to voice file: </span>
       <a href={file}>{file}</a>

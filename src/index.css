@@ -26,3 +26,13 @@ code {
   width: 90px;
   height: 90px;
 }
+
+#map{
+  width: 450px;
+  height: 500px;
+}
+
+#myHide{
+  width: 0px;
+  height: 0px;
+}
