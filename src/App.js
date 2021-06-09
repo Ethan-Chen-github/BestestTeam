@@ -3,7 +3,7 @@ import "./App.css";
 import { React } from "react";
 import { ReactMic } from "react-mic";
 import { useEffect, useState } from "react";
-import { Divider, Button, Layout, Modal } from "antd";
+import { Divider, Button, Layout, Modal, Carousel, Popover } from "antd";
 import { AudioTwoTone } from "@ant-design/icons";
 
 export default function App() {
@@ -12,6 +12,20 @@ export default function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const { Header, Footer, Sider, Content } = Layout;
+
+  const contentStyle = {
+    height: "90px",
+    color: "#fff",
+    lineHeight: "90px",
+    textAlign: "center",
+    background: "green",
+  };
+
+  const content = (
+    <div>
+      <p>Don't be shy! say something! </p>
+    </div>
+  );
 
   const handleOk = () => {
     setIsModalVisible(false);
@@ -66,31 +80,46 @@ export default function App() {
       />
 
       <br />
-
-      <Button
-        shape="circle"
-        icon={<AudioTwoTone />}
-        size="large"
-        onMouseDown={startRecording}
-        onMouseUp={stopRecording}
-      />
+      <Popover content={content}>
+        <Button
+          shape="circle"
+          icon={<AudioTwoTone />}
+          size="large"
+          onMouseDown={startRecording}
+          onMouseUp={stopRecording}
+        />
+      </Popover>
 
       <br />
       <br />
+      <br />
 
-      <span>link to voice file: </span>
-      <a href={file}>{file}</a>
+      <Carousel autoplay>
+        <div>
+          <h3 style={contentStyle}>You can say: What is current wind speed?</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>You can say: What is current output?</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>You can say: Who is the best team for Grand Challenge?</h3>
+        </div>
+      </Carousel>
 
-
-      <Divider />
       <Footer>@2021 Bestest Team</Footer>
 
-
-
-      <Modal title="Voice Command" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal
+        title="Voice Command"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
         <p>Audio Command</p>
         <iframe src={file} />
       </Modal>
+
+      <span>link to voice file: </span>
+      <a href={file}>{file}</a>
     </div>
   );
 }
