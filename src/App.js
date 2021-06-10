@@ -83,7 +83,7 @@ export default function App() {
       <Popover content={content}>
         <Button
           shape="circle"
-          icon={<AudioTwoTone />}
+          icon={<AudioTwoTone id='aud'/>}
           size="large"
           onMouseDown={startRecording}
           onMouseUp={stopRecording}
