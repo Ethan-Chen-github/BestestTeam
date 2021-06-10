@@ -96,10 +96,10 @@ export default function App() {
 
       <Carousel autoplay>
         <div>
-          <h3 style={contentStyle}>You can say: Show me the map for Wind Turbine?</h3>
+          <h3 style={contentStyle}>You can say: Show me the map for Wind Farm</h3>
         </div>
         <div>
-          <h3 style={contentStyle}>You can say: What is current output?</h3>
+          <h3 style={contentStyle}>You can say: Show me the map for Schematics</h3>
         </div>
         <div>
           <h3 style={contentStyle}>You can say: Who is the best team for Grand Challenge?</h3>
@@ -120,8 +120,8 @@ export default function App() {
 
 
 
-      <span>link to voice file: </span>
-      <a href={file}>{file}</a>
+      {/* <span>link to voice file: </span>
+      <a href={file}>{file}</a> */}
     </div>
   );
 }
