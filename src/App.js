@@ -99,7 +99,7 @@ export default function App() {
           <h3 style={contentStyle}>You can say: Show me the map for Wind Farm</h3>
         </div>
         <div>
-          <h3 style={contentStyle}>You can say: Show me the map for Schematics</h3>
+          <h3 style={contentStyle}>You can say: Show me the Schematics for Wind Turbine</h3>
         </div>
         <div>
           <h3 style={contentStyle}>You can say: Who is the best team for Grand Challenge?</h3>
