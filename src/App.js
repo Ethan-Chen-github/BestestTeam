@@ -3,8 +3,16 @@ import "./App.css";
 import { React } from "react";
 import { ReactMic } from "react-mic";
 import { useEffect, useState } from "react";
-import { Divider, Button, Layout, Modal, Carousel, Popover } from "antd";
-import { AudioTwoTone } from "@ant-design/icons";
+import {
+  Divider,
+  Button,
+  Layout,
+  Modal,
+  Carousel,
+  Popover,
+  Drawer,
+} from "antd";
+import { AudioTwoTone ,QuestionOutlined } from "@ant-design/icons";
 
 export default function App() {
   const [record, setRecord] = useState(false);
@@ -12,6 +20,7 @@ export default function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const { Header, Footer, Sider, Content } = Layout;
+  const [visible, setVisible] = useState(false);
 
   const contentStyle = {
     height: "90px",
@@ -19,6 +28,13 @@ export default function App() {
     lineHeight: "90px",
     textAlign: "center",
     background: "green",
+  };
+
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
   };
 
   const content = (
@@ -83,7 +99,7 @@ export default function App() {
       <Popover content={content}>
         <Button
           shape="circle"
-          icon={<AudioTwoTone id='aud'/>}
+          icon={<AudioTwoTone id="aud" />}
           size="large"
           onMouseDown={startRecording}
           onMouseUp={stopRecording}
@@ -96,17 +112,36 @@ export default function App() {
 
       <Carousel autoplay>
         <div>
-          <h3 style={contentStyle}>You can say: Show me the map for Wind Farm</h3>
+          <h3 style={contentStyle}>
+            You can say: Show me the map for Wind Farm
+          </h3>
         </div>
         <div>
-          <h3 style={contentStyle}>You can say: Show me the Schematics for Wind Turbine</h3>
+          <h3 style={contentStyle}>
+            You can say: Show me the Schematics for Wind Turbine
+          </h3>
         </div>
         <div>
-          <h3 style={contentStyle}>You can say: Who is the best team for Grand Challenge?</h3>
+          <h3 style={contentStyle}>
+            You can say: Who is the best team for Grand Challenge?
+          </h3>
         </div>
       </Carousel>
 
       <Footer>@2021 Bestest Team</Footer>
+
+      <Button type="primary" shape="circle" size="large" id='help' icon={<QuestionOutlined id='aud'/>}onClick={showDrawer}/>
+      <Drawer
+        title="Help"
+        placement="right"
+        closable={false}
+        onClose={onClose}
+        visible={visible}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
 
       <Modal
         title="Voice Command"
@@ -114,11 +149,12 @@ export default function App() {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <iframe src={file} id='myHide'/>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27702.085128008992!2d-95.6353049!3d29.784562!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d423a5fdf0dbbad!2sbp%20Center%20For%20High%20Performance%20Computing!5e0!3m2!1sen!2sus!4v1623265059348!5m2!1sen!2sus" id='map'/>
+        <iframe src={file} id="myHide" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27702.085128008992!2d-95.6353049!3d29.784562!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d423a5fdf0dbbad!2sbp%20Center%20For%20High%20Performance%20Computing!5e0!3m2!1sen!2sus!4v1623265059348!5m2!1sen!2sus"
+          id="map"
+        />
       </Modal>
-
-
 
       {/* <span>link to voice file: </span>
       <a href={file}>{file}</a> */}
