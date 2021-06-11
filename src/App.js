@@ -13,7 +13,7 @@ import {
   Drawer,
   notification,
 } from "antd";
-import { AudioTwoTone ,QuestionOutlined } from "@ant-design/icons";
+import { AudioTwoTone, QuestionOutlined } from "@ant-design/icons";
 
 export default function App() {
   const [record, setRecord] = useState(false);
@@ -25,11 +25,11 @@ export default function App() {
 
   const openNotification = () => {
     notification.open({
-      message: 'Notification Title',
+      message: "Notification Title",
       description:
-        'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+        "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
       onClick: () => {
-        console.log('Notification Clicked!');
+        console.log("Notification Clicked!");
       },
     });
   };
@@ -142,7 +142,22 @@ export default function App() {
 
       <Footer>@2021 Bestest Team</Footer>
 
-      <Button type="primary" shape="circle" size="large" id='help' icon={<QuestionOutlined id='aud'/>}onClick={showDrawer}/>
+      <Popover
+        content={
+          <div>Help
+          </div>
+        }
+      >
+        <Button
+          type="primary"
+          shape="circle"
+          size="large"
+          id="help"
+          icon={<QuestionOutlined id="aud" />}
+          onClick={showDrawer}
+        />
+      </Popover>
+
       <Drawer
         title="Help"
         placement="right"
@@ -168,8 +183,6 @@ export default function App() {
           id="map"
         />
       </Modal>
-
-      
 
       {/* <span>link to voice file: </span>
       <a href={file}>{file}</a> */}
