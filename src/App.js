@@ -11,6 +11,7 @@ import {
   Carousel,
   Popover,
   Drawer,
+  notification,
 } from "antd";
 import { AudioTwoTone ,QuestionOutlined } from "@ant-design/icons";
 
@@ -22,6 +23,16 @@ export default function App() {
   const { Header, Footer, Sider, Content } = Layout;
   const [visible, setVisible] = useState(false);
 
+  const openNotification = () => {
+    notification.open({
+      message: 'Notification Title',
+      description:
+        'This is the content of the notification. This is the content of the notification. This is the content of the notification.',
+      onClick: () => {
+        console.log('Notification Clicked!');
+      },
+    });
+  };
   const contentStyle = {
     height: "90px",
     color: "#fff",
@@ -49,6 +60,7 @@ export default function App() {
 
   const handleCancel = () => {
     setIsModalVisible(false);
+    openNotification();
   };
 
   const showModal = () => {
@@ -148,6 +160,7 @@ export default function App() {
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
+        width={1100}
       >
         <iframe src={file} id="myHide" />
         <iframe
@@ -155,6 +168,8 @@ export default function App() {
           id="map"
         />
       </Modal>
+
+      
 
       {/* <span>link to voice file: </span>
       <a href={file}>{file}</a> */}
