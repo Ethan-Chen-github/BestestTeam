@@ -53,3 +53,10 @@ code {
   /* color: green; */
 }
 
+#menu{
+  position:absolute;
+  left: 1.5%;
+  top: 2%;
+  background-color: green;
+  border-color: green;
+}

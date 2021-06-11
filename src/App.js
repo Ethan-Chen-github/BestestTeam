@@ -1,6 +1,6 @@
 import logo from "./bp.png";
 import "./App.css";
-import { React } from "react";
+import React  from "react";
 import { ReactMic } from "react-mic";
 import { useEffect, useState } from "react";
 import {
@@ -12,8 +12,10 @@ import {
   Popover,
   Drawer,
   notification,
+   
 } from "antd";
-import { AudioTwoTone, QuestionOutlined } from "@ant-design/icons";
+import { AudioTwoTone, QuestionOutlined ,MenuOutlined} from "@ant-design/icons";
+import Sample from './components/Sample'
 
 export default function App() {
   const [record, setRecord] = useState(false);
@@ -142,6 +144,11 @@ export default function App() {
 
       <Footer>@2021 Bestest Team</Footer>
 
+      <Sample />
+
+
+      {/* <Button type="primary" icon={<MenuOutlined id='aud'/>} size='middle' id='menu'/> */}
+
       <Popover
         content={
           <div>Help
@@ -183,6 +190,8 @@ export default function App() {
           id="map"
         />
       </Modal>
+
+
 
       {/* <span>link to voice file: </span>
       <a href={file}>{file}</a> */}
