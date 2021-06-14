@@ -1,5 +1,5 @@
 import logo from "./bp.png";
-import "./App.css";
+import "../App.css";
 import React  from "react";
 import { ReactMic } from "react-mic";
 import { useEffect, useState } from "react";
@@ -15,7 +15,7 @@ import {
    
 } from "antd";
 import { AudioTwoTone, QuestionOutlined ,MenuOutlined} from "@ant-design/icons";
-import Sample from './components/Sample'
+import Sample from './Sample'
 
 export default function App() {
   const [record, setRecord] = useState(false);

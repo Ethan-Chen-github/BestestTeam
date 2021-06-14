@@ -36,7 +36,7 @@ export default function App() {
   }
 
   return (
-    <div className="center">
+    <div className="App">
       <Header className="header">
         <h2 id="headerText">BP Voice Interface</h2>
       </Header>

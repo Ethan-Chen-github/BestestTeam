@@ -20,18 +20,7 @@ export default function App() {
       </Menu>
       {
         current == 'voiceflow'?
-        <Task1 />:
-        current == 'task1_2'?
-        <Task1_2 />:
-        current == 'task2'?
-        <Task2 />:
-        current == 'task2_2'?
-        <Task2_2 />:
-        current == 'task3'?
-        <Task3 />:
-        current == 'task3_2'?
-        <Task3_2 />:
-        <Task4 />
+        <VoiceFlow />:<Demo/>
       }
     </div>
   );
