@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/BestestTeam/static/css/main.7e411c73.chunk.css",
-    "main.js": "/BestestTeam/static/js/main.91607389.chunk.js",
-    "main.js.map": "/BestestTeam/static/js/main.91607389.chunk.js.map",
+    "main.js": "/BestestTeam/static/js/main.441977f5.chunk.js",
+    "main.js.map": "/BestestTeam/static/js/main.441977f5.chunk.js.map",
     "runtime-main.js": "/BestestTeam/static/js/runtime-main.c8b60343.js",
     "runtime-main.js.map": "/BestestTeam/static/js/runtime-main.c8b60343.js.map",
     "static/css/2.fc2db407.chunk.css": "/BestestTeam/static/css/2.fc2db407.chunk.css",
-    "static/js/2.0bdcc81e.chunk.js": "/BestestTeam/static/js/2.0bdcc81e.chunk.js",
-    "static/js/2.0bdcc81e.chunk.js.map": "/BestestTeam/static/js/2.0bdcc81e.chunk.js.map",
+    "static/js/2.72106993.chunk.js": "/BestestTeam/static/js/2.72106993.chunk.js",
+    "static/js/2.72106993.chunk.js.map": "/BestestTeam/static/js/2.72106993.chunk.js.map",
     "static/js/3.4ab53a9b.chunk.js": "/BestestTeam/static/js/3.4ab53a9b.chunk.js",
     "static/js/3.4ab53a9b.chunk.js.map": "/BestestTeam/static/js/3.4ab53a9b.chunk.js.map",
     "index.html": "/BestestTeam/index.html",
     "static/css/2.fc2db407.chunk.css.map": "/BestestTeam/static/css/2.fc2db407.chunk.css.map",
     "static/css/main.7e411c73.chunk.css.map": "/BestestTeam/static/css/main.7e411c73.chunk.css.map",
-    "static/js/2.0bdcc81e.chunk.js.LICENSE.txt": "/BestestTeam/static/js/2.0bdcc81e.chunk.js.LICENSE.txt",
+    "static/js/2.72106993.chunk.js.LICENSE.txt": "/BestestTeam/static/js/2.72106993.chunk.js.LICENSE.txt",
     "static/media/bp.2d68a791.png": "/BestestTeam/static/media/bp.2d68a791.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c8b60343.js",
     "static/css/2.fc2db407.chunk.css",
-    "static/js/2.0bdcc81e.chunk.js",
+    "static/js/2.72106993.chunk.js",
     "static/css/main.7e411c73.chunk.css",
-    "static/js/main.91607389.chunk.js"
+    "static/js/main.441977f5.chunk.js"
   ]
 }
