@@ -1,21 +1,11 @@
 import logo from "./bp.png";
 import React from "react";
 import { useState } from "react";
-import { Divider, Button, Layout } from "antd";
+import { Divider, Button } from "antd";
 import { AudioTwoTone } from "@ant-design/icons";
 
 export default function App() {
   const [showVoice, setShowVoice] = useState(false);
-
-  const contentStyle = {
-    height: "90px",
-    color: "#fff",
-    lineHeight: "90px",
-    textAlign: "center",
-    background: "green",
-  };
-
-  const { Header, Footer, Sider, Content } = Layout;
 
   function Voice() {
     setShowVoice(true);
@@ -25,13 +15,7 @@ export default function App() {
     <div className="App">
       {showVoice ? (
         <>
-          <iframe
-            frameBorder="0"
-            // https://creator.voiceflow.com/prototype/60c3700ab3a92a0006f483e4
-            src="https://creator.voiceflow.com/prototype/60c3700ab3a92a0006f483e4"
-            allow="camera;microphone"
-            id="map"
-          />
+          Place holder for AWS LEX
         </>
       ) : (
         <>
@@ -39,7 +23,7 @@ export default function App() {
 
           <Divider />
 
-          <h2>Start the VoiceFlow</h2>
+          <h2>Start the AWS Lex Bot</h2>
 
           <Button
             shape="circle"
@@ -53,9 +37,6 @@ export default function App() {
       <br />
       <br />
       <br />
-
-      {/* <span>link to voice file: </span>
-      <a href={file}>{file}</a> */}
     </div>
   );
 }

@@ -15,7 +15,7 @@ import {
   Tabs,
   Card,
   Progress,
-  Timeline 
+  Timeline,
 } from "antd";
 import {
   AudioTwoTone,
