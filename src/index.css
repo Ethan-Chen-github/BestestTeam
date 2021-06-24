@@ -61,8 +61,7 @@ code {
   border-color: green;
 }
 
-#lexbot{
-  position:absolute;
-  left: 50%;
-  top: 50%;
+#chatwrapper {
+  position: relative !important;
+  left: 40%;
 }
