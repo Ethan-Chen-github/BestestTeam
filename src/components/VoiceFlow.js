@@ -1,21 +1,24 @@
 import logo from "./bp.png";
 import React from "react";
 import { useState } from "react";
-import { Divider, Button, Layout } from "antd";
-import { AudioTwoTone } from "@ant-design/icons";
+import {
+  Divider,
+  Button,
+  Layout,
+  Modal,
+  Carousel,
+  Popover,
+  Drawer,
+  notification,
+} from "antd";
+import {
+  AudioTwoTone,
+  QuestionOutlined,
+  MenuOutlined,
+} from "@ant-design/icons";
 
 export default function App() {
   const [showVoice, setShowVoice] = useState(false);
-
-  const contentStyle = {
-    height: "90px",
-    color: "#fff",
-    lineHeight: "90px",
-    textAlign: "center",
-    background: "green",
-  };
-
-  const { Header, Footer, Sider, Content } = Layout;
 
   function Voice() {
     setShowVoice(true);
@@ -27,7 +30,6 @@ export default function App() {
         <>
           <iframe
             frameBorder="0"
-            // https://creator.voiceflow.com/prototype/60c3700ab3a92a0006f483e4
             src="https://creator.voiceflow.com/prototype/60c3700ab3a92a0006f483e4"
             allow="camera;microphone"
             id="map"
@@ -50,12 +52,22 @@ export default function App() {
         </>
       )}
 
+      <Popover content={<div>Help</div>}>
+        <Button
+          type="primary"
+          shape="circle"
+          size="large"
+          id="help"
+          icon={<QuestionOutlined id="aud" />}
+        />
+      </Popover>
+
+      <br />
+      <br />
       <br />
       <br />
       <br />
 
-      {/* <span>link to voice file: </span>
-      <a href={file}>{file}</a> */}
     </div>
   );
 }

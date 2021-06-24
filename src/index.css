@@ -60,3 +60,9 @@ code {
   background-color: green;
   border-color: green;
 }
+
+#lexbot{
+  position:absolute;
+  left: 50%;
+  top: 50%;
+}
