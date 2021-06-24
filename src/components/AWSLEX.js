@@ -2,19 +2,21 @@ import logo from "./bp.png";
 import React from "react";
 import { useState } from "react";
 import { Divider, Button, Input, Form, Checkbox } from "antd";
-import { AudioTwoTone } from "@ant-design/icons";
-import LexChat from "react-lex";
+// import LexChat from "react-lex";
+import LexChat from "react-lex-plus";
 
 export default function App() {
   const [botName, setBotName] = useState("");
   const [poolId, setPoolId] = useState("");
+  const [region, setRegion] = useState("");
   const [showChat, setShowChat] = useState(false);
 
   const onFinish = (values) => {
-    console.log(values);
     setBotName(values["botName"]);
     setPoolId(values["poolID"]);
+    setRegion(values["region"]);
     setShowChat(true);
+    console.log(poolId, botName);
   };
 
   return (
@@ -38,6 +40,14 @@ export default function App() {
           <Input />
         </Form.Item>
 
+        <Form.Item
+          label="region"
+          name="region"
+          rules={[{ required: true, message: "Please input your region!" }]}
+        >
+          <Input />
+        </Form.Item>
+
         <Form.Item>
           <Button type="primary" htmlType="submit">
             Start Lex Bot
@@ -46,13 +56,17 @@ export default function App() {
       </Form>
       {showChat ? (
         <LexChat
-          botName= {botName}
-          IdentityPoolId= {poolId}
+          botName={botName}
+          IdentityPoolId={poolId}
           placeholder="Placeholder text"
-          style={{ position: "absolute" }}
           backgroundColor="#FFFFFF"
-          height="500px"
+          height="430px"
+          region={region}
           headerText="Chat with our awesome bot"
+          headerStyle={{ backgroundColor: "#ABD5D9", fontSize: "30px" }}
+          greeting={
+            "Hello, how can I help? You can say things like 'help' to get more info"
+          }
         />
       ) : (
         <></>
