@@ -12,11 +12,11 @@ export default function App() {
   const [showChat, setShowChat] = useState(false);
 
   const onFinish = (values) => {
+
     setBotName(values["botName"]);
-    setPoolId(values["poolID"]);
+    setPoolId(values["poolId"]);
     setRegion(values["region"]);
     setShowChat(true);
-    console.log(botName, poolId,region);
   };
 
   return (
@@ -54,7 +54,7 @@ export default function App() {
           </Button>
         </Form.Item>
       </Form>
-      {showChat ? (
+      {showChat && botName !== '' && poolId !== '' && region !== ''? (
         <LexChat
           botName={botName}
           IdentityPoolId={poolId}
