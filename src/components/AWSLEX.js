@@ -28,7 +28,7 @@ export default function App() {
             allow="camera;microphone"
             id="map"
           />
-                    <div>Your BotName: {botName}</div>
+          <div>Your BotName: {botName}</div>
           <div>Your PoolID: {poolId}</div>
           <div>Your Region: {region}</div>
           {/* <LexChat
