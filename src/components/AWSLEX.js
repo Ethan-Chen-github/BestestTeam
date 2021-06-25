@@ -22,15 +22,15 @@ export default function App() {
       <br />
       {botName !== "" && poolId !== "" && region !== "" ? (
         <>
-          <div>Your BotName: {botName}</div>
-          <div>Your PoolID: {poolId}</div>
-          <div>Your Region: {region}</div>
           <iframe
             frameBorder="0"
             src="http://localhost:8000/"
             allow="camera;microphone"
             id="map"
           />
+                    <div>Your BotName: {botName}</div>
+          <div>Your PoolID: {poolId}</div>
+          <div>Your Region: {region}</div>
           {/* <LexChat
             botName={botName}
             IdentityPoolId={poolId}
