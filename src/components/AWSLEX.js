@@ -20,6 +20,14 @@ export default function App() {
   return (
     <div className="App">
       <br />
+
+      <iframe
+        frameBorder="0"
+        src="http://localhost:8000/"
+        allow="camera;microphone"
+        id="map"
+      />
+
       {botName !== "" && poolId !== "" && region !== "" ? (
         <>
           <iframe
@@ -31,19 +39,6 @@ export default function App() {
           <div>Your BotName: {botName}</div>
           <div>Your PoolID: {poolId}</div>
           <div>Your Region: {region}</div>
-          {/* <LexChat
-            botName={botName}
-            IdentityPoolId={poolId}
-            placeholder="Placeholder text"
-            backgroundColor="#FFFFFF"
-            height="430px"
-            region={region}
-            headerText="NEW VER"
-            headerStyle={{ backgroundColor: "#ABD5D9", fontSize: "30px" }}
-            greeting={
-              "Hello, how can I help? You can say things like 'help' to get more info"
-            }
-          /> */}
         </>
       ) : (
         <>
