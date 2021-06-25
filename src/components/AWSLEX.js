@@ -16,7 +16,7 @@ export default function App() {
     setPoolId(values["poolID"]);
     setRegion(values["region"]);
     setShowChat(true);
-    console.log(poolId, botName);
+    console.log(botName, poolId,region);
   };
 
   return (
@@ -33,9 +33,9 @@ export default function App() {
         </Form.Item>
 
         <Form.Item
-          label="poolID"
-          name="poolID"
-          rules={[{ required: true, message: "Please input your poolID!" }]}
+          label="poolId"
+          name="poolId"
+          rules={[{ required: true, message: "Please input your poolId!" }]}
         >
           <Input />
         </Form.Item>
@@ -43,7 +43,7 @@ export default function App() {
         <Form.Item
           label="region"
           name="region"
-          rules={[{ required: true, message: "Please input your region!" }]}
+          rules={[{ required: true, message: "Please input your region! ex: us-west-2" }]}
         >
           <Input />
         </Form.Item>
