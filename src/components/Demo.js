@@ -126,7 +126,7 @@ export default function App() {
       <br />
 
 
-      <Sample />
+      {/* <Sample />   */}
 
       {/* <Button type="primary" icon={<MenuOutlined id='aud'/>} size='middle' id='menu'/> */}
 
