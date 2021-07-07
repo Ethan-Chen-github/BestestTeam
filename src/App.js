@@ -35,19 +35,16 @@ export default function App() {
     <div className="App">
       <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
         <Menu.Item key="awslex">AWS Lex</Menu.Item>
-        <Menu.Item key="voiceflow">VoiceFlow</Menu.Item>
-        <Menu.Item key="demo">Demo</Menu.Item>
+        <Menu.Item key="demo">VoiceNote</Menu.Item>
       </Menu>
       <Header className="header">
         <h2 id="headerText">BP Voice Interface</h2>
       </Header>
-      {current == "voiceflow" ? (
-        <VoiceFlow />
-      ) : current == "awslex" ? (
+      {current == "awslex" ? 
         <AWSLEX />
-      ) : (
+       : 
         <Demo />
-      )}
+      }
 
       <Carousel autoplay>
         <div>

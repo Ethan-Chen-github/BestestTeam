@@ -2,9 +2,6 @@ import logo from "./bp.png";
 import React from "react";
 import { useState } from "react";
 import { Divider, Button, Input, Form, Checkbox } from "antd";
-// import LexChat from "react-lex";
-// import LexChat from "react-lex-plus";
-// import LexChat2 from "react-lex";
 
 export default function App() {
   const [botName, setBotName] = useState("");
@@ -54,7 +51,7 @@ export default function App() {
                 { required: true, message: "Please input your botName!" },
               ]}
             >
-              <Input />
+              <Input placeholder="Wendy"/>
             </Form.Item>
 
             <Form.Item
@@ -62,7 +59,7 @@ export default function App() {
               name="poolId"
               rules={[{ required: true, message: "Please input your poolId!" }]}
             >
-              <Input />
+              <Input placeholder="us-west-2:xxxxx-xxxx-xxxx-xxxx-xxxxxxx" />
             </Form.Item>
 
             <Form.Item
@@ -75,7 +72,7 @@ export default function App() {
                 },
               ]}
             >
-              <Input />
+              <Input placeholder="us-west-2"/>
             </Form.Item>
 
             <Form.Item>
