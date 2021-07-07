@@ -1,7 +1,12 @@
 import logo from "./bp.png";
 import React from "react";
 import { useState } from "react";
-import { Divider, Button, Input, Form, Checkbox } from "antd";
+import { Divider, Button, Input, Form, Checkbox, Popover} from "antd";
+import {
+  AudioTwoTone,
+  QuestionOutlined,
+  MenuOutlined,
+} from "@ant-design/icons";
 
 export default function App() {
   const [botName, setBotName] = useState("");
@@ -22,6 +27,7 @@ export default function App() {
         frameBorder="0"
         src="http://localhost:8000/"
         allow="camera;microphone"
+        allowFullScreen
         id="map"
       />
 
@@ -51,7 +57,7 @@ export default function App() {
                 { required: true, message: "Please input your botName!" },
               ]}
             >
-              <Input placeholder="Wendy"/>
+              <Input placeholder="Wendy" />
             </Form.Item>
 
             <Form.Item
@@ -72,7 +78,7 @@ export default function App() {
                 },
               ]}
             >
-              <Input placeholder="us-west-2"/>
+              <Input placeholder="us-west-2" />
             </Form.Item>
 
             <Form.Item>
@@ -81,6 +87,16 @@ export default function App() {
               </Button>
             </Form.Item>
           </Form>
+
+          <Popover content={<div>Help</div>}>
+            <Button
+              type="primary"
+              shape="circle"
+              size="large"
+              id="helpLex"
+              icon={<QuestionOutlined id="aud" />}
+            />
+          </Popover>
         </>
       )}
 
