@@ -1,14 +1,13 @@
 import logo from "./bp.png";
-import React from "react";
-import { useState } from "react";
-import { Divider, Button, Input, Form, Checkbox, Popover} from "antd";
+import { useState, useEffect } from "react";
+import { Divider, Button, Input, Form, Checkbox, Popover } from "antd";
 import {
   AudioTwoTone,
   QuestionOutlined,
   MenuOutlined,
 } from "@ant-design/icons";
 
-export default function App() {
+export default function App(props) {
   const [botName, setBotName] = useState("");
   const [poolId, setPoolId] = useState("");
   const [region, setRegion] = useState("");
@@ -19,17 +18,27 @@ export default function App() {
     setRegion(values["region"]);
   };
 
+  useEffect(() => {
+    console.log(props);
+  }, []);
+
   return (
     <div className="App">
-      <br />
 
-      <iframe
-        frameBorder="0"
-        src="http://localhost:8000/"
-        allow="camera;microphone"
-        allowFullScreen
-        id="map"
-      />
+      {props.debug ? (
+        <iframe
+          frameBorder="0"
+          src="http://localhost:8000/"
+          allow="camera;microphone"
+          allowFullScreen
+          id="map"
+        />
+      ) : (
+        <>
+          <img src={logo} className="App-logo" alt="logo" />
+          <Divider />
+        </>
+      )}
 
       {botName !== "" && poolId !== "" && region !== "" ? (
         <>
@@ -39,9 +48,6 @@ export default function App() {
             allow="camera;microphone"
             id="map"
           />
-          <div>Your BotName: {botName}</div>
-          <div>Your PoolID: {poolId}</div>
-          <div>Your Region: {region}</div>
         </>
       ) : (
         <>
@@ -82,21 +88,20 @@ export default function App() {
             </Form.Item>
 
             <Form.Item>
-              <Button type="primary" htmlType="submit" id = 'bp-but'>
+              <Button type="primary" htmlType="submit" id="bp-but">
                 Start Lex Bot
               </Button>
               <Popover content={<div>Help</div>}>
-            <Button
-              type="primary"
-              shape="circle"
-              size="large"
-              id='helpLex'
-              icon={<QuestionOutlined id="aud" />}
-            />
-          </Popover>
+                <Button
+                  type="primary"
+                  shape="circle"
+                  size="large"
+                  id="helpLex"
+                  icon={<QuestionOutlined id="aud" />}
+                />
+              </Popover>
             </Form.Item>
           </Form>
-
         </>
       )}
 

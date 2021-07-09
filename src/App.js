@@ -12,6 +12,7 @@ import {
   message,
   Content,
   Drawer,
+  Switch,
 } from "antd";
 import AWSLEX from "./components/AWSLEX";
 import {
@@ -25,6 +26,7 @@ import {
 export default function App() {
   const [current, setCurrent] = useState("awslex");
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [debug, setDebug] = useState(JSON.parse(localStorage.getItem("debug")));
   const [isModalVisible, setIsModalVisible] = useState(true);
   const [visible, setVisible] = useState(false);
 
@@ -57,8 +59,14 @@ export default function App() {
   const onFinish = (values) => {
     console.log(values);
     setUser(values["userName"]);
+    setDebug(values["debug"]);
+    localStorage.setItem("user", JSON.stringify(values["debug"]));
     localStorage.setItem("user", JSON.stringify(values["userName"]));
   };
+
+  useEffect(() => {
+    console.log(user,debug)
+  }, []);
 
   function confirm(e) {
     setUser("");
@@ -94,8 +102,15 @@ export default function App() {
               <Input placeholder="Billy" />
             </Form.Item>
 
+            <Form.Item
+              label="debug"
+              name="debug"
+            >
+              <Switch />
+            </Form.Item>
+
             <Form.Item>
-              <Button type="primary" htmlType="submit" id = 'bp-but'>
+              <Button type="primary" htmlType="submit" id="bp-but">
                 Sign In
               </Button>
             </Form.Item>
@@ -128,7 +143,7 @@ export default function App() {
         className="site-layout"
         style={{ padding: "0 50px", marginTop: 0 }}
       >
-        {current == "awslex" ? <AWSLEX /> : <Demo />}
+        {current == "awslex" ? <AWSLEX debug = {debug}/> : <Demo />}
       </Content>
       <Carousel autoplay>
         <div>
