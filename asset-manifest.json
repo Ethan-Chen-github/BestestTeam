@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/BestestTeam/static/css/main.57a17a7a.chunk.css",
-    "main.js": "/BestestTeam/static/js/main.a26e36cd.chunk.js",
-    "main.js.map": "/BestestTeam/static/js/main.a26e36cd.chunk.js.map",
+    "main.js": "/BestestTeam/static/js/main.e9face57.chunk.js",
+    "main.js.map": "/BestestTeam/static/js/main.e9face57.chunk.js.map",
     "runtime-main.js": "/BestestTeam/static/js/runtime-main.130a7bb5.js",
     "runtime-main.js.map": "/BestestTeam/static/js/runtime-main.130a7bb5.js.map",
     "static/css/2.fc2db407.chunk.css": "/BestestTeam/static/css/2.fc2db407.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.fc2db407.chunk.css",
     "static/js/2.d47a70a4.chunk.js",
     "static/css/main.57a17a7a.chunk.css",
-    "static/js/main.a26e36cd.chunk.js"
+    "static/js/main.e9face57.chunk.js"
   ]
 }
