@@ -61,7 +61,7 @@ export default function Sample() {
         type="primary"
         icon={<MenuOutlined id="aud" />}
         size="middle"
-        id="menu"
+        id="menuBut"
         onClick={showDrawer}
       />
       <Drawer

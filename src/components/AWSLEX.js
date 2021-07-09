@@ -82,7 +82,7 @@ export default function App() {
             </Form.Item>
 
             <Form.Item>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit" id = 'bp-but'>
                 Start Lex Bot
               </Button>
               <Popover content={<div>Help</div>}>

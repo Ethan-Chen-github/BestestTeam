@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
-import Requester from "./requesters/Requester";
 import VoiceFlow from "./components/VoiceFlow";
 import Demo from "./components/Demo";
 import {
@@ -11,13 +10,23 @@ import {
   Button,
   Popconfirm,
   message,
+  Content,
+  Drawer,
 } from "antd";
 import AWSLEX from "./components/AWSLEX";
+import {
+  AudioTwoTone,
+  QuestionOutlined,
+  MenuOutlined,
+  ArrowUpOutlined,
+  ArrowDownOutlined,
+} from "@ant-design/icons";
 
 export default function App() {
   const [current, setCurrent] = useState("awslex");
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const [isModalVisible, setIsModalVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
 
   const { Header, Footer, Sider, Content } = Layout;
 
@@ -29,8 +38,16 @@ export default function App() {
     background: "green",
   };
 
+  const showDrawer = () => {
+    setVisible(true);
+  };
+  const onClose = () => {
+    setVisible(false);
+  };
+
   function handleClick(e) {
     setCurrent(e.key);
+    setVisible(false);
   }
 
   const handleCancel = () => {
@@ -86,10 +103,6 @@ export default function App() {
         </Modal>
       )}
 
-      <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
-        <Menu.Item key="awslex">AWS Lex</Menu.Item>
-        <Menu.Item key="demo">VoiceNote</Menu.Item>
-      </Menu>
       <Header className="header">
         <span id="headerText">BP Voice Interface</span>
         <Popconfirm
@@ -101,10 +114,22 @@ export default function App() {
         >
           <span id="user">Hi , {user}</span>
         </Popconfirm>
+        <span id="menuBut">
+          <Button
+            type="primary"
+            icon={<MenuOutlined id="aud" />}
+            size="middle"
+            id="bp-but"
+            onClick={showDrawer}
+          />
+        </span>
       </Header>
-
-      {current == "awslex" ? <AWSLEX /> : <Demo />}
-
+      <Content
+        className="site-layout"
+        style={{ padding: "0 50px", marginTop: 0 }}
+      >
+        {current == "awslex" ? <AWSLEX /> : <Demo />}
+      </Content>
       <Carousel autoplay>
         <div>
           <h3 style={contentStyle}>
@@ -118,7 +143,26 @@ export default function App() {
         </div>
       </Carousel>
 
-      <Footer>Bestest Microsoft Edgies Team @2021 </Footer>
+      <Footer style={{ textAlign: "center" }}>
+        Bestest Microsoft Edgies Team @2021{" "}
+      </Footer>
+
+      <Drawer
+        title="Menu"
+        placement="left"
+        closable={false}
+        onClose={onClose}
+        visible={visible}
+        width={220}
+      >
+        <Sider trigger={null}>
+          <div className="logo" />
+          <Menu onClick={handleClick} selectedKeys={[current]} mode="inline">
+            <Menu.Item key="awslex">AWS Lex</Menu.Item>
+            <Menu.Item key="demo">VoiceNote</Menu.Item>
+          </Menu>
+        </Sider>
+      </Drawer>
     </div>
   );
 }
