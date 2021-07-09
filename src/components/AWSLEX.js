@@ -85,23 +85,21 @@ export default function App() {
               <Button type="primary" htmlType="submit">
                 Start Lex Bot
               </Button>
-            </Form.Item>
-          </Form>
-
-          <Popover content={<div>Help</div>}>
+              <Popover content={<div>Help</div>}>
             <Button
               type="primary"
               shape="circle"
               size="large"
-              id="helpLex"
+              id='helpLex'
               icon={<QuestionOutlined id="aud" />}
             />
           </Popover>
+            </Form.Item>
+          </Form>
+
         </>
       )}
 
-      <br />
-      <br />
       <br />
     </div>
   );

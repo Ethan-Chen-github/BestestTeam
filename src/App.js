@@ -1,21 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Layout, Menu, Breadcrumb } from "antd";
 import Requester from "./requesters/Requester";
 import VoiceFlow from "./components/VoiceFlow";
 import Demo from "./components/Demo";
 import {
-  Divider,
-  Button,
-  Modal,
   Carousel,
-  Popover,
-  Drawer,
-  notification,
+  Modal,
+  Form,
+  Input,
+  Button,
+  Popconfirm,
+  message,
 } from "antd";
 import AWSLEX from "./components/AWSLEX";
 
 export default function App() {
   const [current, setCurrent] = useState("awslex");
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  const [isModalVisible, setIsModalVisible] = useState(true);
 
   const { Header, Footer, Sider, Content } = Layout;
 
@@ -31,20 +33,77 @@ export default function App() {
     setCurrent(e.key);
   }
 
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  const onFinish = (values) => {
+    console.log(values);
+    setUser(values["userName"]);
+    localStorage.setItem("user", JSON.stringify(values["userName"]));
+  };
+
+  function confirm(e) {
+    setUser("");
+    localStorage.clear();
+  }
+
+  function cancel(e) {
+    console.log(e);
+  }
+
   return (
     <div className="App">
+      {!user && (
+        <Modal
+          title="Please enter your user name"
+          visible={isModalVisible}
+          onCancel={handleCancel}
+          footer={null}
+          width={500}
+        >
+          <Form
+            name="basic"
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
+          >
+            <Form.Item
+              label="userName"
+              name="userName"
+              rules={[
+                { required: true, message: "Please input your user name!" },
+              ]}
+            >
+              <Input placeholder="Billy" />
+            </Form.Item>
+
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                Sign In
+              </Button>
+            </Form.Item>
+          </Form>
+        </Modal>
+      )}
+
       <Menu onClick={handleClick} selectedKeys={[current]} mode="horizontal">
         <Menu.Item key="awslex">AWS Lex</Menu.Item>
         <Menu.Item key="demo">VoiceNote</Menu.Item>
       </Menu>
       <Header className="header">
-        <h2 id="headerText">BP Voice Interface</h2>
+        <span id="headerText">BP Voice Interface</span>
+        <Popconfirm
+          title="Are you sure to sign out?"
+          onConfirm={confirm}
+          onCancel={cancel}
+          okText="Yes"
+          cancelText="No"
+        >
+          <span id="user">Hi , {user}</span>
+        </Popconfirm>
       </Header>
-      {current == "awslex" ? 
-        <AWSLEX />
-       : 
-        <Demo />
-      }
+
+      {current == "awslex" ? <AWSLEX /> : <Demo />}
 
       <Carousel autoplay>
         <div>
