@@ -7,6 +7,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }
 
 code {
@@ -16,10 +30,6 @@ code {
 
 .header {
   background-color: green;
-}
-
-#headerText {
-  color: white;
 }
 
 .ant-btn-icon-only.ant-btn-lg {
@@ -69,10 +79,23 @@ code {
 #helpLex{
   width: 60px !important;
   height: 60px !important;
-  position: absolute;
+  /* position: absolute;
   right: 3%;
-  bottom: 5%;
+  bottom: 5%; */
+  float: right;
+  margin-right: 2%;
   /* background-color: rgba(255, 255, 255, 0.5); */
   background-color: green;
   border-color: green;
+}
+
+#user{
+  float:right;
+  color: white;
+  font-size: 1.1em;
+}
+
+#headerText {
+  color: white;
+  font-size: 1.5em;
 }
