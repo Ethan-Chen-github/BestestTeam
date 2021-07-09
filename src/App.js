@@ -153,10 +153,9 @@ export default function App() {
         closable={false}
         onClose={onClose}
         visible={visible}
-        width={220}
+        width={240}
       >
-        <Sider trigger={null}>
-          <div className="logo" />
+        <Sider>
           <Menu onClick={handleClick} selectedKeys={[current]} mode="inline">
             <Menu.Item key="awslex">AWS Lex</Menu.Item>
             <Menu.Item key="demo">VoiceNote</Menu.Item>

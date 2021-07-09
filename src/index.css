@@ -117,3 +117,7 @@ h3 {
 #menuBut{
   float: left;
 }
+
+.ant-layout-header{
+  padding-left: 1.5%;
+}
