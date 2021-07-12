@@ -47,7 +47,7 @@ export default function App() {
     setVisible(false);
   };
 
-  function handleClick(e) {
+  const handleClick = (e) => {
     setCurrent(e.key);
     setVisible(false);
   }
@@ -68,12 +68,12 @@ export default function App() {
     console.log(user,debug)
   }, []);
 
-  function confirm(e) {
+  const confirm = (e) =>{
     setUser("");
     localStorage.clear();
   }
 
-  function cancel(e) {
+  const cancel = (e) =>{
     console.log(e);
   }
 
