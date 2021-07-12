@@ -12,6 +12,7 @@ import {
   Popover,
   Drawer,
   notification,
+  Space,
 } from "antd";
 import {
   AudioTwoTone,
@@ -93,7 +94,6 @@ export default function App() {
 
   return (
     <div className="App">
-
       <img src={logo} className="App-logo" alt="logo" />
 
       <Divider />
@@ -111,35 +111,35 @@ export default function App() {
       />
 
       <br />
-      <Popover content={content}>
-        <Button
-          shape="circle"
-          icon={<AudioTwoTone id="aud" />}
-          size="large"
-          onMouseDown={startRecording}
-          onMouseUp={stopRecording}
-        />
-      </Popover>
+      <span>
+        <Popover content={content}>
+          <Button
+            shape="circle"
+            icon={<AudioTwoTone id="aud" />}
+            size="large"
+            onMouseDown={startRecording}
+            onMouseUp={stopRecording}
+          />
+        </Popover>
+        <Popover content={<div>Help</div>}>
+          <Button
+            type="primary"
+            shape="circle"
+            size="large"
+            id = 'helpDemo'
+            icon={<QuestionOutlined id="aud" />}
+            onClick={showDrawer}
+          />
+        </Popover>
+      </span>
 
       <br />
       <br />
       <br />
-
 
       {/* <Sample />   */}
 
       {/* <Button type="primary" icon={<MenuOutlined id='aud'/>} size='middle' id='menu'/> */}
-
-      <Popover content={<div>Help</div>}>
-        <Button
-          type="primary"
-          shape="circle"
-          size="large"
-          id="help"
-          icon={<QuestionOutlined id="aud" />}
-          onClick={showDrawer}
-        />
-      </Popover>
 
       <Drawer
         title="Help"
@@ -160,7 +160,7 @@ export default function App() {
         onCancel={handleCancel}
         width={1100}
       >
-        <iframe src={file}  />
+        <iframe src={file} />
         {/* <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27702.085128008992!2d-95.6353049!3d29.784562!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d423a5fdf0dbbad!2sbp%20Center%20For%20High%20Performance%20Computing!5e0!3m2!1sen!2sus!4v1623265059348!5m2!1sen!2sus"
           id="map"

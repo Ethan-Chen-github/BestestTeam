@@ -148,12 +148,12 @@ export default function App() {
       <Carousel autoplay>
         <div>
           <h3 style={contentStyle}>
-            You can say: Show me the map for Wind Farm
+            You can say: Record a voice note
           </h3>
         </div>
         <div>
           <h3 style={contentStyle}>
-            You can say: Show me the Schematics for Wind Turbine
+            You can say: Where is the gearbox in the schematics?
           </h3>
         </div>
       </Carousel>
