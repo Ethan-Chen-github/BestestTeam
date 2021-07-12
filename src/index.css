@@ -51,12 +51,13 @@ code {
   font-size: 24px;
 }
 
-#help{
+#helpDemo{
   width: 60px !important;;
   height: 60px !important;;
-  position:absolute;
+  float: right;
+  /* position:absolute;
   right: 3%;
-  bottom: 23%;
+  bottom: 23%; */
   /* background-color: rgba(255, 255, 255, 0.5); */
   background-color: green;
   border-color: green;
