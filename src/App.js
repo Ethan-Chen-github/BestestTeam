@@ -34,7 +34,7 @@ export default function App() {
           <Menu
             theme="light"
             mode="inline"
-            defaultSelectedKeys={["1"]}
+            defaultSelectedKeys={["awslex"]}
             style={{ padding: "5%", height: "100%" }}
             onClick={handleClick}
           >
