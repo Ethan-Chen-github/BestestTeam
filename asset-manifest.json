@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/BestestTeam/static/css/main.62a0ca80.chunk.css",
-    "main.js": "/BestestTeam/static/js/main.2c543920.chunk.js",
-    "main.js.map": "/BestestTeam/static/js/main.2c543920.chunk.js.map",
+    "main.css": "/BestestTeam/static/css/main.2f306962.chunk.css",
+    "main.js": "/BestestTeam/static/js/main.9fd7aab6.chunk.js",
+    "main.js.map": "/BestestTeam/static/js/main.9fd7aab6.chunk.js.map",
     "runtime-main.js": "/BestestTeam/static/js/runtime-main.fb8fe97f.js",
     "runtime-main.js.map": "/BestestTeam/static/js/runtime-main.fb8fe97f.js.map",
     "static/js/2.61ccb6a3.chunk.js": "/BestestTeam/static/js/2.61ccb6a3.chunk.js",
     "static/js/2.61ccb6a3.chunk.js.map": "/BestestTeam/static/js/2.61ccb6a3.chunk.js.map",
     "index.html": "/BestestTeam/index.html",
-    "precache-manifest.c80989645ccda826c4c2eb55a4836094.js": "/BestestTeam/precache-manifest.c80989645ccda826c4c2eb55a4836094.js",
+    "precache-manifest.22ee6010d72b080331a81a07304a5766.js": "/BestestTeam/precache-manifest.22ee6010d72b080331a81a07304a5766.js",
     "service-worker.js": "/BestestTeam/service-worker.js",
-    "static/css/main.62a0ca80.chunk.css.map": "/BestestTeam/static/css/main.62a0ca80.chunk.css.map",
+    "static/css/main.2f306962.chunk.css.map": "/BestestTeam/static/css/main.2f306962.chunk.css.map",
     "static/js/2.61ccb6a3.chunk.js.LICENSE.txt": "/BestestTeam/static/js/2.61ccb6a3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fb8fe97f.js",
     "static/js/2.61ccb6a3.chunk.js",
-    "static/css/main.62a0ca80.chunk.css",
-    "static/js/main.2c543920.chunk.js"
+    "static/css/main.2f306962.chunk.css",
+    "static/js/main.9fd7aab6.chunk.js"
   ]
 }
