@@ -28,7 +28,7 @@ export default function App() {
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
-          width="250"
+          width="300"
           style={{ background: "#fff" }}
         >
           <Menu
