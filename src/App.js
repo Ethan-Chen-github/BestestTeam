@@ -56,8 +56,8 @@ export default function App() {
             </Menu.Item>
           </Menu>
         </Sider>
-        <Layout>
-          <Content style={{ background: "#fff", minHeight: "90vh" }}>
+        <Layout style={{height:'100vh'}}>
+          <Content style={{ background: "#fff" }}>
             {current === "awslex" ? (
               <iframe
                 frameBorder="0"
@@ -69,7 +69,7 @@ export default function App() {
               <Audio />
             ):(<AboutUs />)}
           </Content>
-          <Footer style={{ textAlign: "center", minHeight: "10vh" }}>
+          <Footer style={{ textAlign: "center", minHeight: "100px" }}>
             <h3>bp p.l.c.</h3> ©2021 Created by Bestest Microsoft Edges
           </Footer>
         </Layout>
