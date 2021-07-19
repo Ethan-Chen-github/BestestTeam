@@ -10,7 +10,7 @@ import {
 import "./App.less";
 import { AmazonOutlined, AudioOutlined, UserOutlined,QuestionOutlined } from "@ant-design/icons";
 import AboutUs from "./AboutUs";
-import Audio from "./Audio";
+import Help from "./Help";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Option } = Select;
@@ -45,9 +45,6 @@ export default function App() {
             <Menu.Item key="awslex" icon={<AmazonOutlined />}>
               AWS Lex Bot
             </Menu.Item>
-            <Menu.Item key="audio" icon={<AudioOutlined />}>
-              Voice Recorder
-            </Menu.Item>
             <Menu.Item key="aboutus" icon={<UserOutlined />}>
               About Us
             </Menu.Item>
@@ -65,8 +62,8 @@ export default function App() {
                 allow="camera;microphone"
                 style={{ width: "100%", height: "100%" }}
               />
-            ) : current === 'audio' ?(
-              <Audio />
+            ) : current === 'help' ?(
+              <Help />
             ):(<AboutUs />)}
           </Content>
           <Footer style={{ textAlign: "center", minHeight: "100px" }}>

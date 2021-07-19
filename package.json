@@ -11,6 +11,7 @@
     "antd": "^4.16.7",
     "craco-less": "^1.18.0",
     "mypackage": "^0.1.0",
+    "rc-queue-anim": "^1.8.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
