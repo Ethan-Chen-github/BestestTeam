@@ -67,7 +67,7 @@ export default function App() {
             ):(<AboutUs />)}
           </Content>
           <Footer style={{ textAlign: "center", minHeight: "100px" }}>
-            <h3>bp p.l.c.</h3> ©2021 Created by Bestest Microsoft Edges
+            <h3>bp p.l.c.</h3> ©2021 The Bestest Microsoft Edgies
           </Footer>
         </Layout>
       </Layout>

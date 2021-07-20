@@ -21,9 +21,6 @@ import {
 } from "@ant-design/icons";
 import QueueAnim from "rc-queue-anim";
 
-const { Header, Content, Footer, Sider } = Layout;
-
-const { Option } = Select;
 const { Title } = Typography;
 
 export default function AboutUs() {
@@ -53,13 +50,21 @@ export default function AboutUs() {
         alignContent: "center",
       }}
     >
-      Bestest Team Microsoft Edges
+      <br/>
+      <Title>The Bestest Microsoft Edgies</Title>
       <Divider />
-      <QueueAnim delay={300}>
+      <QueueAnim
+        delay={300}
+        style={{
+          display: "grid",
+          justifyContent: "center",
+          alignContent: "center",
+        }}
+      >
         {Names.map((name, index) => {
           return (
             <div key={index}>
-              <p>{name}</p>
+              <Title level={4}> {name}</Title>
             </div>
           );
         })}

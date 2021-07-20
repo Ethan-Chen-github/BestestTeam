@@ -11,6 +11,7 @@ import {
   Typography,
   Space,
   Divider,
+  Empty
 } from "antd";
 import "./App.less";
 import { Layout, Menu } from "antd";
@@ -28,7 +29,7 @@ const { Title } = Typography;
 export default function Audio() {
   return (
     <>
-        Coming soon...
+        <Empty style={{marginTop:'25%'}}/>
     </>
   );
 }
