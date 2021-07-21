@@ -25,7 +25,7 @@ const { Title } = Typography;
 
 export default function AboutUs() {
   const Names = [
-    "Koehne, Christopher,",
+    "Koehne, Christopher",
     "Razzaq, Bassam",
     "Perille, Daniel",
     "Shieh, John",
@@ -50,7 +50,7 @@ export default function AboutUs() {
         alignContent: "center",
       }}
     >
-      <br/>
+      <br />
       <Title>The Bestest Microsoft Edgies</Title>
       <Divider />
       <QueueAnim
@@ -63,9 +63,9 @@ export default function AboutUs() {
       >
         {Names.map((name, index) => {
           return (
-            <div key={index}>
-              <Title level={4}> {name}</Title>
-            </div>
+            <span key={index} style={{ fontSize: 18 }}>
+              {name}
+            </span>
           );
         })}
       </QueueAnim>
