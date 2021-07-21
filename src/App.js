@@ -1,15 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {
-  Select,
-  Typography,
-  Divider,
-  Layout,
-  Menu,
-} from "antd";
+import { Select, Typography, Divider, Layout, Menu } from "antd";
 import "./App.less";
-import { AmazonOutlined, AudioOutlined, UserOutlined,QuestionOutlined } from "@ant-design/icons";
+import {
+  AmazonOutlined,
+  AudioOutlined,
+  UserOutlined,
+  QuestionOutlined,
+  DownloadOutlined,
+} from "@ant-design/icons";
 import AboutUs from "./AboutUs";
+import DownloadServiceHistory from "./DownloadServiceHistory";
 import Help from "./Help";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -45,6 +46,9 @@ export default function App() {
             <Menu.Item key="awslex" icon={<AmazonOutlined />}>
               AWS Lex Bot
             </Menu.Item>
+            <Menu.Item key="Download" icon={<DownloadOutlined />}>
+              Download Service History
+            </Menu.Item>
             <Menu.Item key="aboutus" icon={<UserOutlined />}>
               About Us
             </Menu.Item>
@@ -53,7 +57,7 @@ export default function App() {
             </Menu.Item>
           </Menu>
         </Sider>
-        <Layout style={{height:'100vh'}}>
+        <Layout style={{ height: "100vh" }}>
           <Content style={{ background: "#fff" }}>
             {current === "awslex" ? (
               <iframe
@@ -62,9 +66,13 @@ export default function App() {
                 allow="camera;microphone"
                 style={{ width: "100%", height: "100%" }}
               />
-            ) : current === 'help' ?(
+            ) : current === "help" ? (
               <Help />
-            ):(<AboutUs />)}
+            ) : current === "aboutus" ? (
+              <AboutUs />
+            ) : (
+              <DownloadServiceHistory />
+            )}
           </Content>
           <Footer style={{ textAlign: "center", minHeight: "100px" }}>
             <h3>bp p.l.c.</h3> ©2021 The Bestest Microsoft Edgies
