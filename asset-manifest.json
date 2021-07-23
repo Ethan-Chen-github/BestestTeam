@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/BestestTeam/static/css/main.bdf402b0.chunk.css",
-    "main.js": "/BestestTeam/static/js/main.cf1c6ddd.chunk.js",
-    "main.js.map": "/BestestTeam/static/js/main.cf1c6ddd.chunk.js.map",
+    "main.js": "/BestestTeam/static/js/main.c3a11229.chunk.js",
+    "main.js.map": "/BestestTeam/static/js/main.c3a11229.chunk.js.map",
     "runtime-main.js": "/BestestTeam/static/js/runtime-main.fb8fe97f.js",
     "runtime-main.js.map": "/BestestTeam/static/js/runtime-main.fb8fe97f.js.map",
     "static/js/2.29caf7c2.chunk.js": "/BestestTeam/static/js/2.29caf7c2.chunk.js",
     "static/js/2.29caf7c2.chunk.js.map": "/BestestTeam/static/js/2.29caf7c2.chunk.js.map",
     "index.html": "/BestestTeam/index.html",
-    "precache-manifest.7560793113293982d28b707b9a9dd021.js": "/BestestTeam/precache-manifest.7560793113293982d28b707b9a9dd021.js",
+    "precache-manifest.8e75aef6d8574cc1a1454cada87fd4d3.js": "/BestestTeam/precache-manifest.8e75aef6d8574cc1a1454cada87fd4d3.js",
     "service-worker.js": "/BestestTeam/service-worker.js",
     "static/css/main.bdf402b0.chunk.css.map": "/BestestTeam/static/css/main.bdf402b0.chunk.css.map",
     "static/js/2.29caf7c2.chunk.js.LICENSE.txt": "/BestestTeam/static/js/2.29caf7c2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.fb8fe97f.js",
     "static/js/2.29caf7c2.chunk.js",
     "static/css/main.bdf402b0.chunk.css",
-    "static/js/main.cf1c6ddd.chunk.js"
+    "static/js/main.c3a11229.chunk.js"
   ]
 }
