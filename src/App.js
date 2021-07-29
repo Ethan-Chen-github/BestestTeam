@@ -44,7 +44,7 @@ export default function App() {
             </div>
             <Divider />
             <Menu.Item key="awslex" icon={<AmazonOutlined />}>
-              AWS Lex Bot
+              Ask Wendy
             </Menu.Item>
             <Menu.Item key="Download" icon={<DownloadOutlined />}>
               Download Service History
